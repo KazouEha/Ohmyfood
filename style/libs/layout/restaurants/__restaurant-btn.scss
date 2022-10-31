@@ -1,0 +1,16 @@
+.commander {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+        @extend %btn;
+        width: 160px;
+        margin-bottom: 130px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+    &__btn:hover {
+        animation: scaling 300ms forwards;
+    }
+}

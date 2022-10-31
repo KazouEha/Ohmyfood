@@ -1,0 +1,22 @@
+$breakpoint-mid : 900px;
+
+
+@media (min-width: $breakpoint-mid) {
+    //responsive pages
+    .resto{
+        max-width: 850px;
+        margin-right: auto;
+        margin-left: auto;
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+            &__etapes {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+    

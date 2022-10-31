@@ -1,0 +1,35 @@
+// animation de chargement de la page
+.loader {
+    position: fixed;
+    @extend %centrer;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    animation: 3s disparition forwards;
+    animation-iteration-count: 1;
+    &__div {
+        @extend %centrer;
+        flex-direction: column;
+        padding: 25px;
+        font-size: x-large;
+        font-weight: bold;
+        &--titre {
+            margin-bottom: 15px;
+        }
+        &--img {
+            width: 35%;
+        }
+    }
+    &__spin {
+        border: 12px solid #f3f3f3;
+        border-top: 12px solid #a05adc;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: load 2s linear infinite;
+    }
+}
+

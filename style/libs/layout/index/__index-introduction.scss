@@ -1,0 +1,63 @@
+// section de presentation du site
+.introduction {
+    z-index: 0;
+}
+
+.localisation {
+    @extend %centrer;
+    background-color: #eaeaea;
+    z-index: -1;
+    &__div {
+        @extend %centrer;
+        padding: 10px;
+        font-weight: bold;
+        &--dot {
+            margin-right: 10px;
+        }
+        &--lieu {
+            border: none;
+            text-decoration: none;
+            color: black;
+            background-color: #eaeaea;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            width: 110px;
+        }
+        &--lieu::placeholder {
+            color: black;
+            font-weight: bold;
+        }
+        &--lieu:focus {
+            outline-color: black;
+        }
+    }
+}
+
+.presentation {
+    @extend %centrer;
+    background-color: #f6f6f6;
+    &__div {
+        @extend %centrer;
+        flex-direction: column;
+        height: 250px;
+        &--titre {
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: larger;
+        }
+        &--texte {
+            text-align: center;
+            width: 250px;
+            margin-bottom: 15px;
+        }
+        &--btn{
+            @extend %btn;
+            &:hover{
+              animation: scaling 300ms forwards;
+            }
+        }
+    }
+}

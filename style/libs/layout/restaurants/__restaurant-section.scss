@@ -1,0 +1,22 @@
+.section {
+    margin-top: -50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #f6f6f6;
+    .resto {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &__name {
+            position: relative;
+            @extend %between;
+            font-size: 30px;
+            margin-bottom: 30px;
+            &--titre { 
+                font-family: 'Shrikhand';
+            }
+        }
+    }
+}

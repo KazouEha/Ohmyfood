@@ -1,0 +1,115 @@
+
+
+@media (min-width: $breakpoint-desktop) {
+
+    body {
+    }
+    //responsive header
+    .header__container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //responsive index introduction
+    .localisation__div {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .presentation__div {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fonctionnement__div{
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 30px;
+        &--titre {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    
+    //reponsive index restaurant
+    .restaurant{
+        min-height: 52vh;
+        &__div {
+            max-width: 1200px;
+            height: 70%;
+            margin:auto;
+           &--titre {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            &--liste {
+                display: flex;
+                flex-wrap: wrap;
+            } 
+        }  
+    }
+    .card {
+        width: 45%;
+    }
+
+    //responsive page
+    .illustration {
+        height: 47vh !important;
+    }
+    .resto {
+        max-width: 1200px;
+    }
+    
+    .menu{
+        width:380px;
+        margin-left: auto;
+        margin-right: auto;
+        &__etapes {
+            margin-top: 0px;
+        }
+        .plat {
+            &__animation {
+                width:330px;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            &__carte {
+                width: 315px;
+            }
+            &__animation:hover .plat__carte {
+                width: 260px;
+            }
+            &__animation:hover .plat__nom {
+                width: 200px;
+            }
+            &__animation:hover .plat__description--infos {
+                width: 200px;
+            }
+        }
+    }
+    
+    .commander_bouton {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    
+    
+
+    //responsive footer
+    .footer {
+        background-color: #353535;
+        .footer__div {
+            background-color: #353535;
+            max-width: 1200px;
+            margin: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

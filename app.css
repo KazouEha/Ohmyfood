@@ -1,0 +1,736 @@
+.plat__valider, .fonctionnement__btn--no, .presentation__div, .presentation, .localisation__div, .localisation, .loader__div, .loader, .headerPage, .header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section .resto__name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commander__btn, .presentation__div--btn {
+  padding: 12px;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Roboto", "sans serif";
+}
+
+.heart__div {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.heart__div .heart__i {
+  position: absolute;
+}
+.heart__div .heart__far {
+  transition: all 0.6s ease-in-out;
+}
+.heart__div .heart__fas {
+  opacity: 0;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s ease-in-out;
+  overflow: hidden;
+}
+.heart__div:hover .heart__fas {
+  opacity: 1;
+}
+.heart__div:hover .heart__far {
+  opacity: 0;
+}
+
+@keyframes scaling {
+  to {
+    transform: scale(1.05);
+  }
+}
+@keyframes disparition {
+  99% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.header {
+  width: 100%;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3px;
+}
+.header__container {
+  height: 45px;
+}
+.header__container--img {
+  width: 150px;
+}
+
+.headerPage__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+.headerPage__nav--link {
+  display: flex;
+  align-items: center;
+}
+.headerPage__logo {
+  width: 150px;
+  justify-self: center;
+}
+.headerPage__vide {
+  width: 10px;
+}
+
+.footer {
+  background-color: #353535;
+  display: flex;
+  align-items: center;
+}
+.footer__div {
+  padding: 20px;
+  color: white;
+}
+.footer__logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.footer__option {
+  display: flex;
+  font-weight: bold;
+}
+.footer__option--icone {
+  width: 25px;
+}
+.footer__option--texte {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  animation: 3s disparition forwards;
+  animation-iteration-count: 1;
+}
+.loader__div {
+  flex-direction: column;
+  padding: 25px;
+  font-size: x-large;
+  font-weight: bold;
+}
+.loader__div--titre {
+  margin-bottom: 15px;
+}
+.loader__div--img {
+  width: 35%;
+}
+.loader__spin {
+  border: 12px solid #f3f3f3;
+  border-top: 12px solid #a05adc;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: load 2s linear infinite;
+}
+
+.introduction {
+  z-index: 0;
+}
+
+.localisation {
+  background-color: #eaeaea;
+  z-index: -1;
+}
+.localisation__div {
+  padding: 10px;
+  font-weight: bold;
+}
+.localisation__div--dot {
+  margin-right: 10px;
+}
+.localisation__div--lieu {
+  border: none;
+  text-decoration: none;
+  color: black;
+  background-color: #eaeaea;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 110px;
+}
+.localisation__div--lieu::placeholder {
+  color: black;
+  font-weight: bold;
+}
+.localisation__div--lieu:focus {
+  outline-color: black;
+}
+
+.presentation {
+  background-color: #f6f6f6;
+}
+.presentation__div {
+  flex-direction: column;
+  height: 250px;
+}
+.presentation__div--titre {
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: larger;
+}
+.presentation__div--texte {
+  text-align: center;
+  width: 250px;
+  margin-bottom: 15px;
+}
+.presentation__div--btn:hover {
+  animation: scaling 300ms forwards;
+}
+
+.fonctionnement {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.fonctionnement__div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fonctionnement__div--titre {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.fonctionnement__div--button {
+  margin-left: 6px;
+}
+.fonctionnement__btn {
+  display: flex;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #f6f6f6;
+  margin: 15px 15px 15px 25px;
+  padding: 20px;
+  box-shadow: 0px 5px 10px lightgrey;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.6s ease-in-out;
+}
+.fonctionnement__btn--no {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  font-size: x-small;
+  color: white;
+  position: relative;
+  right: 30px;
+}
+.fonctionnement__btn--icone {
+  margin-right: 25px;
+}
+.fonctionnement__btn--texte {
+  font-weight: bold;
+}
+.fonctionnement__btn:hover {
+  transition-duration: 1s;
+  background-color: #f5edff;
+  box-shadow: 0px 5px 10px grey;
+}
+.fonctionnement__btn:hover--icone {
+  color: #9356dc;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+}
+.restaurant__div {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.restaurant__div--titre {
+  font-size: x-large;
+  font-weight: bold;
+}
+.restaurant__div--liste {
+  margin-top: 10px;
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  border-radius: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 10px grey;
+}
+.card__link--sticker {
+  display: flex;
+  position: absolute;
+  right: 5px;
+  background-color: #99e2d0;
+  color: #008766;
+  width: 55px;
+  margin: 10px;
+  justify-content: center;
+  font-size: x-small;
+  font-weight: bold;
+  padding: 5px;
+  align-self: flex-end;
+}
+.card__link--img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
+  width: 100%;
+  height: 140px;
+}
+.card__caption {
+  display: flex;
+  justify-content: space-between;
+  height: 85px;
+  padding: 8px;
+  width: 90%;
+}
+.card__caption--nom {
+  font-weight: bold;
+}
+.card__caption--like {
+  font-size: x-large;
+  margin: 3px;
+}
+.card__caption--like::before {
+  transition: color 0.3s ease-out;
+}
+.card__caption--like:hover::before {
+  cursor: pointer;
+  font-weight: bold;
+  color: #a05adc;
+}
+
+.card:hover {
+  animation: scaling 1s forwards;
+}
+
+@media (min-width: 411px) {
+  .resto .menu {
+    width: 380px;
+  }
+  .resto .menu .plat__animation {
+    width: 375px;
+  }
+  .resto .menu .plat__carte {
+    width: 360px;
+  }
+  .resto .menu .plat__animation:hover .plat__carte {
+    width: 305px;
+  }
+  .resto .menu .plat__animation:hover .plat__nom {
+    width: 300px;
+  }
+  .resto .menu .plat__animation:hover .plat__description--infos {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .fonctionnement__div {
+    display: flex;
+    flex-direction: column;
+  }
+  .fonctionnement__div--btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .fonctionnement__btn {
+    margin: 10px;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .footer__logo {
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 900px) {
+  .resto {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .resto .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
+  .resto .menu__etapes {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .header__container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .localisation__div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .presentation__div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fonctionnement__div {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  .fonctionnement__div--titre {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .restaurant {
+    min-height: 52vh;
+  }
+  .restaurant__div {
+    max-width: 1200px;
+    height: 70%;
+    margin: auto;
+  }
+  .restaurant__div--titre {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .restaurant__div--liste {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 45%;
+  }
+  .illustration {
+    height: 47vh !important;
+  }
+  .resto {
+    max-width: 1200px;
+  }
+  .menu {
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu__etapes {
+    margin-top: 0px;
+  }
+  .menu .plat__animation {
+    width: 330px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .menu .plat__carte {
+    width: 315px;
+  }
+  .menu .plat__animation:hover .plat__carte {
+    width: 260px;
+  }
+  .menu .plat__animation:hover .plat__nom {
+    width: 200px;
+  }
+  .menu .plat__animation:hover .plat__description--infos {
+    width: 200px;
+  }
+  .commander_bouton {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    background-color: #353535;
+  }
+  .footer .footer__div {
+    background-color: #353535;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.illustration {
+  position: relative;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  z-index: -1;
+}
+
+.section {
+  margin-top: -50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #f6f6f6;
+}
+.section .resto {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section .resto__name {
+  position: relative;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.section .resto__name--titre {
+  font-family: "Shrikhand";
+}
+
+.menu {
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu__etapes {
+  margin-bottom: 40px;
+}
+.menu__titre--ligne {
+  background-color: #99e2d0;
+  width: 50px;
+  height: 5px;
+  margin-top: 5px;
+}
+
+.plat {
+  margin-top: 10px;
+}
+.plat__animation {
+  width: 330px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px lightgrey;
+  opacity: 0;
+}
+.plat__animation:hover .plat__carte {
+  width: 260px;
+}
+.plat__animation:hover .plat__valider--check {
+  animation: rotate 1s forwards;
+  animation-delay: 100ms;
+}
+.plat__carte {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  padding: 11px;
+  position: relative;
+  transition: all 1s;
+}
+.plat__nom {
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.5s;
+}
+.plat__description {
+  display: flex;
+  justify-content: space-between;
+}
+.plat__description--infos {
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.5s;
+}
+.plat__description--prix {
+  font-weight: bold;
+  padding: 3px;
+}
+.plat__valider {
+  width: 50px;
+  right: -50px;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  background-color: #99e2d0;
+  color: white;
+  cursor: pointer;
+}
+.plat__valider--check {
+  font-size: x-large;
+}
+
+.item1 {
+  animation: apparition 3s forwards;
+}
+
+.item2 {
+  animation: apparition 3s forwards;
+  animation-delay: 300ms;
+}
+
+.item3 {
+  animation: apparition 3s forwards;
+  animation-delay: 600ms;
+}
+
+.item4 {
+  animation: apparition 3s forwards;
+  animation-delay: 900ms;
+}
+
+.commander {
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.commander__btn {
+  width: 160px;
+  margin-bottom: 130px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.commander__btn:hover {
+  animation: scaling 300ms forwards;
+}
+
+/*# sourceMappingURL=app.css.map */

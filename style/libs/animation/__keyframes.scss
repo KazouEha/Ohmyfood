@@ -1,0 +1,29 @@
+// animation générique de changement de taille 
+@keyframes scaling {
+  from {}
+  to {transform: scale(1.05);}
+}
+
+// animation du loader spinner
+@keyframes disparition {
+  0% {}
+  99%{ opacity: 1;z-index:5;}
+  100% {opacity:0; z-index: -1;}
+}
+
+@keyframes load {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// fait apparaître les différents plats
+@keyframes apparition {
+  0%   {transform: translateY(100px); opacity:0;}
+  100%  {transform: translateY(0px);opacity:1;}
+}
+
+// animation de rotation sur la validation
+@keyframes rotate {
+  0% {transform: rotate(180deg);}
+  100% {transform: rotate(0);}
+}

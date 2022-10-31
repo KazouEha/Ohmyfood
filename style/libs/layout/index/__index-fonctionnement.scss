@@ -1,0 +1,54 @@
+// section notice de fonctionnement du site
+.fonctionnement {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &__div {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        &--titre {
+            font-size: x-large;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        &--button {
+            margin-left: 6px;
+        }
+    }
+    &__btn {
+        display: flex;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #f6f6f6;
+        margin: 15px 15px 15px 25px;
+        padding: 20px;
+        box-shadow: 0px  5px 10px lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.6s ease-in-out;
+        &--no {
+            @extend %centrer;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #9356dc;
+            font-size: x-small;
+            color: white;
+            position: relative;
+            right: 30px;
+        }
+        &--icone {
+            margin-right: 25px;
+        }
+        &--texte {
+            font-weight: bold;
+        }
+    }
+    &__btn:hover{
+        transition-duration: 1s;
+        background-color: #f5edff;
+        box-shadow: 0px  5px 10px grey;
+        &--icone {
+            color: #9356dc;
+        }
+    }
+}

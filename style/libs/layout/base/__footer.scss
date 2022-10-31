@@ -1,0 +1,29 @@
+.footer {
+    background-color: #353535;
+    display: flex;
+    align-items: center;
+    &__div {
+        padding: 20px;
+        color: white;
+    }
+    &__logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    &__option {
+        display: flex;
+        font-weight: bold;
+        &--icone {
+            width: 25px;
+        }
+        &--texte {
+            text-decoration: none;
+            color: white;
+            padding: 2px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+}
